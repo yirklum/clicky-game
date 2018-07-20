@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "Hank Hill",
+        "image": "./images/hank.png"
+    },
+
+    {
+        "id": 2,
+        "name": "Peggy Hill",
+        "image":"./images/peggy.png"
+    },
+
+    {
+        "id": 3,
+        "name": "Bobby Hill",
+        "image":"./images/bobby.png"
+    },
+
+    {
+        "id": 4,
+        "name": "Luanne Platter",
+        "image":"./images/luanne.png"
+    },
+
+    {
+        "id": 5,
+        "name": "Cotton Hill",
+        "image":"./images/cotton.png"
+    },
+
+    {
+        "id": 6,
+        "name": "Ladybird Hill",
+        "image":"./images/ladybird.png"
+    },
+
+    {
+        "id": 7,
+        "name": "Bill Dauterive",
+        "image":"./images/bill.png"
+    },
+
+    {
+        "id": 8,
+        "name": "Dale Gribble",
+        "image":"./images/dale.png"
+    },
+
+    {
+        "id": 9,
+        "name": "Nancy Gribble",
+        "image":"./images/nancy.png"
+    },
+
+    {
+        "id": 10,
+        "name": "Joseph Gribble",
+        "image":"./images/joseph.png"
+    },
+
+    {
+        "id": 11,
+        "name": "John Redcorn",
+        "image":"./images/john.png"
+    },
+
+    {
+        "id": 12,
+        "name": "Connie Souphanousinphone",
+        "image":"./images/connie.png"
+    },
+
+    {
+        "id": 13,
+        "name": "Kahn Souphanousinphone",
+        "image":"./images/kahn.png"
+    },
+
+    {
+        "id": 14,
+        "name": "Minh Souphanousinphone",
+        "image":"./images/minh.png"
+    },
+
+
+    {
+        "id": 15,
+        "name": "Jeff Boomhauer",
+        "image":"./images/boomhauer.png"
+    },
+
+    {
+        "id": 16,
+        "name": "Buck Strickland",
+        "image":"./images/buck.png"
+    }
+]
