@@ -32,7 +32,7 @@ class App extends Component {
         score: 0
       });
       // Tell player they lost
-      alert("Dangit! That choice ain't right!");
+      alert("Got-dang it! That choice ain't right!");
 
     // If character has not already been selected, reshuffle cards, add to score and add to array
     } else {
@@ -47,8 +47,8 @@ class App extends Component {
 
         // When player gets 16 points, tell them they won and reset game
         () => {
-          if (this.state.score === 16) {
-            alert("Hooyah! You won!");
+          if (this.state.score === 15) {
+            alert("Ho yeah! You won!");
             this.setState({
               characters: this.state.characters.sort(function(a,b) {
                 return 0.5 - Math.random();

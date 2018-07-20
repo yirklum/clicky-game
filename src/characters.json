@@ -88,11 +88,5 @@
         "id": 15,
         "name": "Jeff Boomhauer",
         "image":"./images/boomhauer.png"
-    },
-
-    {
-        "id": 16,
-        "name": "Buck Strickland",
-        "image":"./images/buck.png"
     }
 ]

@@ -7,7 +7,7 @@ class NavBar extends Component {
             <nav>
                <div id="directions">
                     Test your memory! Click on each character, but be sure not to click on the 
-                    same character twice. Get to 16 points and you win! Ho yeah!
+                    same character twice. Get to 15 points and you win! Ho yeah!
                 </div>   
             
                 <div id="score">
