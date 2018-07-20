@@ -1,7 +1,18 @@
-#score {
-
+nav {
+   width: 98%;
+   font-size: 24px;
+   border: solid 1px grey
+  
 }
 
-#high-score {
-    
+#score {
+    background-color: #42e3f1; 
+    padding: 15px;
+    padding-left: 45%;
+}
+
+#directions {
+    display: inline-block;
+    background-color: #85ffce;
+    padding: 15px;
 }

@@ -1,3 +1,4 @@
+// Import required files
 import React, { Component } from "react";
 import CharacterCard from "./components/CharacterCard";
 import Wrapper from "./components/Wrapper";
@@ -15,21 +16,25 @@ class App extends Component {
     selectedCharacters: [],
   };
 
-
+  // Check if a character has already been clicked on, adjust array accordingly
   selectCharacter = event => {
     const clickedCharacter = event.target.alt;
-    console.log(clickedCharacter.name);
     const alreadySelected = this.state.selectedCharacters.indexOf(clickedCharacter) > -1;
-
+    
+    // If character is already selected, shuffle cards and restart
     if (alreadySelected) {
       this.setState({
         characters: this.state.characters.sort(function(a,b) {
           return 0.5 - Math.random();
         }),
+        // Clear array and reset score
         selectedCharacters: [],
         score: 0
       });
+      // Tell player they lost
       alert("Dangit! That choice ain't right!");
+
+    // If character has not already been selected, reshuffle cards, add to score and add to array
     } else {
       this.setState(
         {
@@ -39,6 +44,8 @@ class App extends Component {
           selectedCharacters: this.state.selectedCharacters.concat(clickedCharacter),
           score: this.state.score + 1
         },
+
+        // When player gets 16 points, tell them they won and reset game
         () => {
           if (this.state.score === 16) {
             alert("Hooyah! You won!");
@@ -55,72 +62,18 @@ class App extends Component {
     }
   };
 
-// Method to shuffle character cards between clicks
-// shuffleCards = (array) => {
-//   let characterArray = characters;
-//   for (let i = characterArray.length - 1; i > 0; i--) {
-//     let j = Math.floor(Math.random() * (i + 1));
-//     [characterArray[i], characterArray[j]] = [characterArray[j], characterArray[i]];
-//   }
-//   return characterArray
-// }
-
-// Add character to selected array
-// selectCharacter = (name) => {
-//   let selected = this.state.selected;
-
-//   // Check if character has been selected
-//   if (selected.indexOf(name) === -1) {
-//     // Add character to array and add to score
-//     this.setState({
-//       selected: selected.concat(name),
-//       score: this.state.score + 1,
-//       highScore: this.state.score + 1 > this.state.highScore ? this.state.score + 1 : this.state.highScore,
-//       message: "Correct! Hoo-ya!"
-//     })
-//     this.shuffleCards();
-//   }
-//   // Shuffle cards, reset score, clear array
-//   else {
-//     this.setState({
-//       message: "Dangit! That choice ain't right!",
-//       score: 0,
-//       selected: []
-//     })
-//   }
-// }
-
-
-
-  // displayCards = id => {
-  //   this.state.characters.forEach((image) => {
-  //     if (image.id === id) {
-  //       if (image.selected) {
-  //         alert("Sorry, this card has already been selected.");
-  //         this.setState({})
-  //         this.reset();
-  //         return false;
-  //       }
-  //       else {
-  //         this.addToScore();
-  //         image.selected = true;
-  //       }
-  //       if (this.state.score >= this.state.highScore) {
-  //         this.newHighScore();
-  //       }
-  //     }
-  //   });
-  // }
-
-
+// Render elements in order of appearance
 
   render() {
     return (
       <Wrapper>
-        <Title>Characters</Title>
+        <Title />
+        <br />
         <NavBar 
           score={this.state.score}
         />
+        <br />
+        {/* Use map method to render character cards */}
         {this.state.characters.map(characters => (
           <CharacterCard
             selectCharacter={this.selectCharacter}
@@ -135,4 +88,5 @@ class App extends Component {
   }
 }
 
+// Export file for use in index.js
 export default App;

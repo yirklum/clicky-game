@@ -4,7 +4,10 @@ import "./Title.css";
 const Title = () => (
 
     <div className="headline">
-        <h1 className="title">King of the Click</h1>
+        <p className="title">King of the Click</p>
+        <div id="title-image">
+            <img src="./images/koth.png" />
+        </div>    
     </div>    
 )
 
